@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,33 +15,57 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Fact Goes Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpq-1p-aJj">
-                                <rect key="frame" x="20" y="138" width="335" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpq-1p-aJj">
+                                <rect key="frame" x="40" y="260" width="520" height="80"/>
+                                <string key="text">Some Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes Here</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czH-pg-Quq">
-                                <rect key="frame" x="97" y="319" width="180" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czH-pg-Quq">
+                                <rect key="frame" x="40" y="460" width="520" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="520" id="8un-Zs-KPp"/>
+                                </constraints>
+                                <color key="tintColor" red="0.098684210526315791" green="0.73684210526315785" blue="0.95721114309210531" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Show Another Fun Fact"/>
                                 <connections>
                                     <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="mre-8P-LbS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did You Know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-XL-BQf">
+                                <rect key="frame" x="55" y="100.5" width="120.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.51315789473684215" green="0.67105263157894579" blue="0.99725020559210531" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kpq-1p-aJj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7He-04-Vrh"/>
+                            <constraint firstItem="czH-pg-Quq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8l1-eA-UFu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="czH-pg-Quq" secondAttribute="trailing" constant="20" id="HCC-3B-T14"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="czH-pg-Quq" secondAttribute="bottom" constant="110" id="Kd7-lu-uHl"/>
+                            <constraint firstItem="Kpq-1p-aJj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="QsT-vW-qYu"/>
+                            <constraint firstItem="Kpq-1p-aJj" firstAttribute="centerX" secondItem="czH-pg-Quq" secondAttribute="centerX" id="WN5-bO-hfL"/>
+                            <constraint firstItem="Kpq-1p-aJj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="240" id="chW-ls-K25"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kpq-1p-aJj" secondAttribute="trailing" constant="20" id="f1F-ay-Wxs"/>
+                            <constraint firstItem="IdU-XL-BQf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="jiG-VA-yBD"/>
+                            <constraint firstItem="Kpq-1p-aJj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kcO-3v-jff"/>
+                            <constraint firstItem="Kpq-1p-aJj" firstAttribute="top" secondItem="IdU-XL-BQf" secondAttribute="bottom" constant="138" id="ly2-iL-LT8"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="funFactLabel" destination="Kpq-1p-aJj" id="CjC-E9-uGw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="429.5"/>
+            <point key="canvasLocation" x="304" y="429"/>
         </scene>
     </scenes>
 </document>
