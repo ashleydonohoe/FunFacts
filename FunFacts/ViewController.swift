@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var funFactLabel: UILabel!
     let factModel = FactModel()
     
+    @IBOutlet weak var factButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +27,9 @@ class ViewController: UIViewController {
 
 
     @IBAction func showFunFact() {
+        let newColor = ColorModel().getRandomColor()
+        view.backgroundColor = newColor
+        factButton.tintColor = newColor
         funFactLabel.text = factModel.getRandomFact()
         
     }

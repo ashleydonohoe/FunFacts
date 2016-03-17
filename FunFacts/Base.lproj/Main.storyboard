@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpq-1p-aJj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpq-1p-aJj">
                                 <rect key="frame" x="40" y="260" width="520" height="80"/>
                                 <string key="text">Some Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes HereSome Fact Goes Here</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did You Know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdU-XL-BQf">
-                                <rect key="frame" x="55" y="100.5" width="120.5" height="21.5"/>
+                                <rect key="frame" x="40" y="101" width="120.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -48,18 +48,20 @@
                         <constraints>
                             <constraint firstItem="Kpq-1p-aJj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7He-04-Vrh"/>
                             <constraint firstItem="czH-pg-Quq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8l1-eA-UFu"/>
+                            <constraint firstItem="IdU-XL-BQf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="81" id="EKI-rf-slY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="czH-pg-Quq" secondAttribute="trailing" constant="20" id="HCC-3B-T14"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="czH-pg-Quq" secondAttribute="bottom" constant="110" id="Kd7-lu-uHl"/>
                             <constraint firstItem="Kpq-1p-aJj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="QsT-vW-qYu"/>
                             <constraint firstItem="Kpq-1p-aJj" firstAttribute="centerX" secondItem="czH-pg-Quq" secondAttribute="centerX" id="WN5-bO-hfL"/>
                             <constraint firstItem="Kpq-1p-aJj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="240" id="chW-ls-K25"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kpq-1p-aJj" secondAttribute="trailing" constant="20" id="f1F-ay-Wxs"/>
-                            <constraint firstItem="IdU-XL-BQf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="jiG-VA-yBD"/>
+                            <constraint firstItem="IdU-XL-BQf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="jiG-VA-yBD"/>
                             <constraint firstItem="Kpq-1p-aJj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kcO-3v-jff"/>
                             <constraint firstItem="Kpq-1p-aJj" firstAttribute="top" secondItem="IdU-XL-BQf" secondAttribute="bottom" constant="138" id="ly2-iL-LT8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="factButton" destination="czH-pg-Quq" id="Dzu-J2-xxD"/>
                         <outlet property="funFactLabel" destination="Kpq-1p-aJj" id="CjC-E9-uGw"/>
                     </connections>
                 </viewController>
